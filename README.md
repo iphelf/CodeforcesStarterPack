@@ -2,6 +2,8 @@
 
 ## Usage
 
+![Demo](doc/demo.png)
+
 ### Coding
 
 Code under `source` directory.
