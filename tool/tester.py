@@ -17,9 +17,9 @@ def main():
         [pathTestee],
         stdin=open(pathTestInput, 'r', encoding),
         stdout=sp.PIPE
-    ).stdout.decode(encoding).rstrip()
+    ).stdout.decode(encoding).rstrip().replace("\r", "")
 
-    testOracle = open(pathTestOracle, 'r', encoding).read().rstrip()
+    testOracle = open(pathTestOracle, 'r', encoding).read().rstrip().replace("\r", "")
 
     if testOutput == testOracle:
         print("[==> Accepted <==]")
